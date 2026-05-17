@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+
+    background: #222;
+}
+
+/* LOGO */
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+/* AUTH */
+.auth {
+    display: flex;
+    gap: 15px;
+}
+
+/* LINKS */
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HOVER */
+.navbar a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+/* PRODUCTS */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    flex: 0 0 calc(25% - 20px);
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #ccc;
+
+    padding: 15px;
+
+    transition: 0.3s;
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+}
+
+/* BUTTON */
+.card button {
+    margin-top: auto;
+
+    padding: 10px;
+
+    border: none;
+
+    background: #222;
+    color: white;
+
+    cursor: pointer;
+}
+
+/* HOVER CARD */
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}

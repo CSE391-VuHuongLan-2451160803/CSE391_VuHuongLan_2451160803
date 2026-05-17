@@ -1,0 +1,207 @@
+/* MOBILE FIRST */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: #f5f5f5;
+}
+
+/* HEADER */
+.header {
+    background: #222;
+    color: white;
+
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    font-size: 24px;
+}
+
+/* HAMBURGER */
+.hamburger {
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+/* NAV */
+.nav {
+    display: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* SIDEBAR */
+.sidebar {
+    display: none;
+}
+
+/* ADS */
+.ads {
+    display: none;
+}
+
+/* PRODUCTS */
+.products {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    padding: 15px;
+
+    text-align: center;
+}
+
+/* IMAGE */
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* FONT */
+.card h3 {
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+/* BUTTON */
+.card button {
+    background: #222;
+    color: white;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    background: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (min-width: 768px) {
+
+    /* NAV */
+    .nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+        display: block;
+
+        background: white;
+
+        padding: 20px;
+    }
+
+    /* LAYOUT */
+    .layout {
+        display: grid;
+
+        grid-template-columns: 1fr;
+    }
+
+    /* PRODUCTS */
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* FONT */
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+}
+
+/* ========================= */
+/* DESKTOP */
+/* ========================= */
+
+@media (min-width: 1024px) {
+
+    /* LAYOUT */
+    .layout {
+        display: grid;
+
+        grid-template-columns: 200px 1fr 200px;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    /* ADS */
+    .ads {
+        display: block;
+    }
+
+    .ads img {
+        width: 100%;
+    }
+
+    /* PRODUCTS */
+    .products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* FONT */
+    .card h3 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,76 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Box chung */
+.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    background-color: #dbeafe;
+}
+
+/* Content-box */
+.content-box {
+    box-sizing: content-box;
+}
+
+/* Border-box */
+.border-box {
+    box-sizing: border-box;
+}
+
+/* Layout */
+.container {
+    width: 1000px;
+    display: flex;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+/* Không dùng border-box */
+.no-border-box .sidebar,
+.no-border-box .ads {
+    width: 250px;
+    padding: 15px;
+    background-color: #f3f4f6;
+}
+
+.no-border-box .content {
+    width: 500px;
+    padding: 20px;
+    background-color: #dbeafe;
+}
+
+/* Dùng border-box */
+.border-layout * {
+    box-sizing: border-box;
+}
+
+.border-layout .sidebar,
+.border-layout .ads {
+    width: 250px;
+    padding: 15px;
+    background-color: #f3f4f6;
+}
+
+.border-layout .content {
+    width: 500px;
+    padding: 20px;
+    background-color: #dbeafe;
+}

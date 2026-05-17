@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* CONTAINER */
+.container {
+    display: grid;
+
+    grid-template-columns: 200px minmax(400px, 1fr) 200px;
+
+    grid-template-areas:
+        "header header header"
+        "hero hero hero"
+        "sidebar main ads"
+        "footer footer footer";
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+/* HEADER */
+.header {
+    grid-area: header;
+
+    background: #222;
+    color: white;
+
+    padding: 20px;
+}
+
+/* HERO */
+.hero {
+    grid-area: hero;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+/* HERO CARD */
+.hero-card {
+    background: #dbeafe;
+
+    padding: 40px;
+
+    text-align: center;
+}
+
+/* CARD NỔI BẬT */
+.hero-card:first-child {
+    grid-column: span 2;
+}
+
+/* SIDEBAR */
+.sidebar {
+    grid-area: sidebar;
+
+    background: #f3f4f6;
+
+    padding: 20px;
+}
+
+/* MAIN */
+.main-content {
+    grid-area: main;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+/* PRODUCT */
+.product {
+    border: 1px solid #ccc;
+
+    padding: 15px;
+
+    text-align: center;
+}
+
+/* PRODUCT IMAGE */
+.product img {
+    width: 100%;
+}
+
+/* ADS */
+.ads {
+    grid-area: ads;
+}
+
+.ads img {
+    width: 100%;
+}
+
+/* FOOTER */
+.footer {
+    grid-area: footer;
+
+    background: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}

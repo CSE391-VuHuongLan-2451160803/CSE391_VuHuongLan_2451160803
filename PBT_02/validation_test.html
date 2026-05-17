@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation Test</title>
+</head>
+<body>
+
+<h2>Test Validation</h2>
+
+<form>
+
+    <!-- TH1 -->
+    <p>Required:</p>
+    <input type="text" required placeholder="Bỏ trống">
+    <br><br>
+
+    <!-- TH2 -->
+    <p>Email:</p>
+    <input type="email" placeholder="Nhập abc">
+    <br><br>
+
+    <!-- TH3 -->
+    <p>Number (1-10):</p>
+    <input type="number" min="1" max="10" value="15">
+    <br><br>
+
+    <!-- TH4 -->
+    <p>Pattern (10 số):</p>
+    <input type="text" pattern="[0-9]{10}" placeholder="Nhập abc123">
+    <br><br>
+
+    <!-- TH5 -->
+    <p>Password (min 8):</p>
+    <input type="password" minlength="8" placeholder="Nhập 123">
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>

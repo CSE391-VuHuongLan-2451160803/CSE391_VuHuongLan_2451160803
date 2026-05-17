@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 60px;
+
+    background: #222;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    margin-top: 80px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: #f3f4f6;
+    padding: 20px;
+
+    position: sticky;
+    top: 80px;
+
+    height: fit-content;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    position: relative;
+
+    width: 320px;
+
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+/* BADGE */
+.badge {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: red;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+/* IMAGE */
+.product-card img {
+    max-width: 100%;
+}
+
+/* DUMMY CONTENT */
+.dummy {
+    margin-top: 40px;
+}
+
+.dummy p {
+    margin-bottom: 50px;
+}
+
+/* SCROLL TOP */
+.scroll-top {
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #222;
+    color: white;
+
+    font-size: 24px;
+    cursor: pointer;
+}
