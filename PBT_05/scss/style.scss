@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'mixins';
+@import 'components';
+
+/* RESPONSIVE */
+.container {
+
+    width: 100%;
+
+    @include respond-to(tablet) {
+        width: 720px;
+    }
+
+    @include respond-to(desktop) {
+        width: 1200px;
+    }
+}

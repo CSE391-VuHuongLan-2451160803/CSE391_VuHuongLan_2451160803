@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tailwind Landing</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white">
+
+<!-- NAVBAR -->
+<nav class="bg-white dark:bg-gray-800 shadow-md">
+
+    <div class="max-w-7xl mx-auto px-6 py-4
+                flex justify-between items-center">
+
+        <h1 class="text-2xl font-bold">
+            ShopTLU
+        </h1>
+
+        <ul class="hidden md:flex gap-6">
+
+            <li>
+                <a href="#"
+                   class="hover:text-blue-500">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                   class="hover:text-blue-500">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                   class="hover:text-blue-500">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+        <button class="md:hidden text-2xl">
+            ☰
+        </button>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+<section class="bg-blue-500 text-white
+                text-center py-24 px-6">
+
+    <h2 class="text-4xl font-bold mb-4">
+        Welcome to ShopTLU
+    </h2>
+
+    <p class="mb-6 text-lg">
+        Mua sắm công nghệ hiện đại
+    </p>
+
+    <button class="bg-white text-blue-500
+                   px-6 py-3 rounded-lg
+                   hover:bg-gray-200">
+
+        Mua ngay
+
+    </button>
+
+</section>
+
+<!-- PRODUCT GRID -->
+<section class="max-w-7xl mx-auto p-6">
+
+    <div class="grid grid-cols-1
+                md:grid-cols-2
+                lg:grid-cols-4
+                gap-6">
+
+        <!-- CARD -->
+        <div class="bg-white dark:bg-gray-800
+                    rounded-lg shadow-md
+                    hover:shadow-xl
+                    transition-shadow duration-300
+                    overflow-hidden">
+
+            <img src="https://placehold.co/300x200"
+                 class="w-full">
+
+            <div class="p-4">
+
+                <h3 class="text-lg font-semibold mb-2">
+                    iPhone 16
+                </h3>
+
+                <p class="text-gray-500 dark:text-gray-300 mb-4">
+                    Smartphone cao cấp
+                </p>
+
+                <button class="bg-blue-500 text-white
+                               px-4 py-2 rounded-md
+                               hover:bg-blue-600">
+
+                    Mua ngay
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- COPY thêm card -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <img src="https://placehold.co/300x200" class="w-full">
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">MacBook Pro</h3>
+                <p class="text-gray-500 dark:text-gray-300 mb-4">Laptop hiệu năng cao</p>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+                    Mua ngay
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <img src="https://placehold.co/300x200" class="w-full">
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">AirPods</h3>
+                <p class="text-gray-500 dark:text-gray-300 mb-4">Tai nghe không dây</p>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+                    Mua ngay
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <img src="https://placehold.co/300x200" class="w-full">
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">iPad Pro</h3>
+                <p class="text-gray-500 dark:text-gray-300 mb-4">Máy tính bảng cao cấp</p>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+                    Mua ngay
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-800 text-white mt-10">
+
+    <div class="max-w-7xl mx-auto
+                grid grid-cols-1 md:grid-cols-4
+                gap-6 p-8">
+
+        <div>
+            <h4 class="font-bold mb-3">
+                About
+            </h4>
+        </div>
+
+        <div>
+            <h4 class="font-bold mb-3">
+                Support
+            </h4>
+        </div>
+
+        <div>
+            <h4 class="font-bold mb-3">
+                Policy
+            </h4>
+        </div>
+
+        <div>
+            <h4 class="font-bold mb-3">
+                Contact
+            </h4>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
