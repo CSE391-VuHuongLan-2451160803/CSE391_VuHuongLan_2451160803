@@ -61,3 +61,64 @@ console.log(0 === false);            // F
 console.log("" == false);            // T
 
 Nên dùng: "===" vì không ép kiểu ngầm.
+
+Câu A4 (5đ) — Truthy & Falsy
+Liệt kê TẤT CẢ giá trị Falsy trong JavaScript (đọc tài liệu):
+false
+0
+-0
+0n
+""
+''
+``
+null
+undefined
+NaN
+
+Sau đó dự đoán kết quả:
+if ("0") console.log("A");           // In A
+if ("") console.log("B");            // Không in
+if ([]) console.log("C");            // In C
+if ({}) console.log("D");            // In D
+if (null) console.log("E");          // Không in
+if (0) console.log("F");             // Không in
+if (-1) console.log("G");            // In G
+if (" ") console.log("H");           // In H (space)
+
+Câu A5 (5đ) — Template Literals
+Cách 1
+Trước
+var greeting =
+    "Xin chào " + name +
+    "! Bạn " + age +
+    " tuổi.";
+Sau
+let greeting =
+`Xin chào ${name}! Bạn ${age} tuổi.`;
+Cách 2
+Trước
+var url =
+    "https://api.example.com/users/"
+    + userId +
+    "/orders?page=" +
+    page;
+Sau
+let url =
+    `https://api.example.com/users/${userId}/orders?page=${page}`;
+Cách 3
+Trước
+var html =
+    "<div class=\"card\">" +
+    "<h2>" + title + "</h2>" +
+    "<p>" + description + "</p>" +
+    "<span>Giá: " + price + "đ</span>" +
+    "</div>";
+Sau
+let html = `
+    <div class="card">
+        <h2>${title}</h2>
+        <p>${description}</p>
+        <span>Giá: ${price}đ</span>
+    </div>
+    `;
+
