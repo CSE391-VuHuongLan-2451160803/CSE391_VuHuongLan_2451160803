@@ -40,5 +40,5 @@ function customFizzBuzz(n, rules) {
 customFizzBuzz(30, [
     { divisor: 3, word: "Fizz" },
     { divisor: 5, word: "Buzz" },
-    { divisor: 7, word: "Jazz" }S
+    { divisor: 7, word: "Jazz" }
 ]);
