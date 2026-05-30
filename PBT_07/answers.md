@@ -122,3 +122,70 @@ let html = `
     </div>
     `;
 
+PHẦN C — SUY LUẬN (20 điểm)
+Câu C1 (10đ) — Debug JavaScript
+Tìm và sửa TẤT CẢ lỗi trong code sau (có ít nhất 6 lỗi):
+Lỗi 1
+if (giaSauGiam = 0)
+
+Sai vì dùng toán tử gán.
+
+Sửa:
+
+if (giaSauGiam === 0)
+Lỗi 2
+
+Không kiểm tra kiểu dữ liệu.
+
+tinhGiaGiamGia("100000",20)
+
+Chuỗi có thể gây lỗi.
+
+Sửa:
+
+if (
+typeof giaBan !== "number"
+)
+Lỗi 3
+
+Không kiểm tra giá âm.
+
+giaBan < 0
+Lỗi 4
+
+Thiếu dấu ;
+
+Best practice:
+
+return giaSauGiam;
+Lỗi 5
+
+var không nên dùng.
+
+let giamGia =
+giaBan * phanTramGiam / 100;
+Lỗi 6 (Lỗi ẩn)
+for (var i = 0; i < 5; i++)
+
+Sau 1 giây:
+
+Item 5
+Item 5
+Item 5
+Item 5
+Item 5
+
+Vì var chỉ có function scope.
+
+Sửa:
+
+for(let i = 0; i < 5; i++)
+
+Kết quả:
+
+Item 0
+Item 1
+Item 2
+Item 3
+Item 4
+
