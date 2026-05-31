@@ -145,3 +145,80 @@ clearInterval(timer);
 }
 
 });
+const palette =
+document.querySelector("#palette");
+
+const commandInput =
+document.querySelector("#commandInput");
+
+const commandBtn =
+document.querySelector("#commandBtn");
+function openPalette(){
+
+palette.classList.remove("hidden");
+
+commandInput.focus();
+
+}
+
+function closePalette(){
+
+palette.classList.add("hidden");
+
+}
+commandBtn.addEventListener(
+"click",
+openPalette
+);
+
+document.addEventListener("keydown",(e)=>{
+
+if(e.ctrlKey && e.key==="k"){
+
+e.preventDefault();
+
+openPalette();
+
+}
+
+if(e.key==="Escape"){
+
+closePalette();
+
+}
+
+});
+const commandList =
+document.querySelector("#commandList");
+
+commandInput.addEventListener("input",()=>{
+
+const value=
+commandInput.value.toLowerCase();
+
+const items=
+commandList.querySelectorAll("li");
+
+items.forEach(item=>{
+
+item.style.display=
+item.textContent
+.toLowerCase()
+.includes(value)
+? "block"
+: "none";
+
+});
+
+});
+commandInput.addEventListener("keydown",(e)=>{
+
+if(e.key==="Enter"){
+
+alert("Command executed");
+
+closePalette();
+
+}
+
+});
