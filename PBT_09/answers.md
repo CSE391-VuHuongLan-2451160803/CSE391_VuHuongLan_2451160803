@@ -285,3 +285,114 @@ Lỗi 9: append() hỗ trợ nhiều kiểu dữ liệu
 Không sai nhưng chuẩn hơn:
 
 historyList.appendChild(li);
+
+Câu C2 (7đ) — Performance
+Tại sao bind 1000 event là BAD PRACTICE?
+
+Ví dụ:
+
+for(let i=0;i<1000;i++){
+
+    div.addEventListener("click",handler);
+
+}
+
+Sẽ tạo:
+
+1000 event listeners
+tốn RAM
+tốn CPU
+DOM lớn sẽ chậm
+Event Delegation
+
+Thay vì:
+
+1000 listeners
+
+Ta dùng:
+
+1 listener
+
+ở thằng cha.
+
+Ví dụ:
+
+list.addEventListener("click",(e)=>{
+
+    if(e.target.classList.contains("item")){
+
+        console.log(e.target.textContent);
+
+    }
+
+});
+
+Lợi ích:
+
+ít memory
+nhanh hơn
+item tạo động vẫn hoạt động
+Code gây 1000 lần reflow
+for (let i = 0; i < 1000; i++) {
+
+    const div = document.createElement("div");
+
+    div.textContent = `Item ${i}`;
+
+    document.body.appendChild(div);
+
+}
+
+Mỗi lần:
+
+appendChild
+
+→ Browser phải tính toán layout lại.
+
+≈ 1000 reflow.
+
+Dùng DocumentFragment
+const fragment = document.createDocumentFragment();
+
+for(let i=0;i<1000;i++){
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = `Item ${i}`;
+
+    fragment.appendChild(div);
+
+}
+
+document.body.appendChild(fragment);
+Tại sao nhanh hơn?
+Cách cũ
+append
+↓
+reflow
+
+append
+↓
+reflow
+
+append
+↓
+reflow
+
+...
+1000 lần
+Cách mới
+append vào Fragment
+↓
+không render
+
+append vào Fragment
+↓
+không render
+
+...
+
+append Fragment vào DOM
+↓
+1 lần reflow
