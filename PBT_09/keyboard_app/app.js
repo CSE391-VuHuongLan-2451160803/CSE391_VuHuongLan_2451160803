@@ -107,3 +107,41 @@ modal.classList.add("hidden");
 }
 
 });
+let playing=false;
+let timer=null;
+
+function nextImage(){
+
+current++;
+
+if(current>=images.length){
+
+current=0;
+
+}
+
+showImage();
+
+}
+
+document.addEventListener("keydown",(e)=>{
+
+if(e.code==="Space"){
+
+e.preventDefault();
+
+playing=!playing;
+
+if(playing){
+
+timer=setInterval(nextImage,2000);
+
+}else{
+
+clearInterval(timer);
+
+}
+
+}
+
+});
