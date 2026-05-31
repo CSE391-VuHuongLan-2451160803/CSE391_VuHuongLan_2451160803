@@ -111,3 +111,56 @@ const nums = [1,2,3,4,5,6,7,8,9,10];
     n => `Số ${n} là ${n % 2 === 0 ? "chẵn" : "lẻ"}`
 );
 8. [...nums].reverse();
+
+Câu A4 (5đ) — Object Destructuring & Spread
+console.log(name, price, ram, color);
+
+Output
+
+iPhone 16 25990000 8 Titan
+console.log(specs);
+
+❌ ReferenceError
+
+Vì không có biến specs.
+
+Ta chỉ destructure:
+
+specs: { ram, color }
+console.log(updated.price);
+23990000
+console.log(updated.sale);
+true
+console.log(product.price);
+25990000
+
+Object gốc KHÔNG đổi.
+
+Spread Gotcha
+const copy = { ...product };
+
+copy.specs.ram = 16;
+
+Sau đó:
+
+console.log(product.specs.ram);
+
+Output:
+
+16
+Tại sao?
+
+Spread chỉ copy nông (shallow copy).
+
+product.specs
+copy.specs
+
+đều trỏ tới cùng object trong bộ nhớ.
+
+Deep copy
+const copy = {
+    ...product,
+    specs: {
+        ...product.specs
+    }
+};
