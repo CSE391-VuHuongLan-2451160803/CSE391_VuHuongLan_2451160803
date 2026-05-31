@@ -164,3 +164,33 @@ const copy = {
         ...product.specs
     }
 };
+
+PHẦN C — SUY LUẬN (20 điểm)
+Câu C1 (10đ) — Refactor Code
+const processOrders = orders =>
+    orders
+        .filter(
+            ({ status, total }) =>
+                status === "completed" &&
+                total > 100000
+        )
+        .map(
+            ({
+                id,
+                customer,
+                total
+            }) => ({
+                id,
+                customer,
+                total,
+                discount:
+                    total * 0.1,
+                finalTotal:
+                    total * 0.9
+            })
+        )
+        .sort(
+            (a, b) =>
+                b.finalTotal -
+                a.finalTotal
+        );
