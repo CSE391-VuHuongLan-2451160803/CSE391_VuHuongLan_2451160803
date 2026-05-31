@@ -113,3 +113,54 @@ function checkConfirm(){
 }
 
 confirmInput.addEventListener("input", checkConfirm);
+const phoneInput = document.querySelector("#phone");
+const phoneMsg = document.querySelector("#phoneMsg");
+
+const submitBtn = document.querySelector("#submitBtn");
+
+let validPhone = false;
+
+phoneInput.addEventListener("input", () => {
+
+    let value = phoneInput.value.replace(/\D/g,'');
+
+    if(value.length > 10){
+        value = value.slice(0,10);
+    }
+
+    if(value.length > 4){
+        value =
+        value.slice(0,4) +
+        "-" +
+        value.slice(4,7) +
+        "-" +
+        value.slice(7);
+    }
+
+    phoneInput.value = value;
+
+    const digits = value.replace(/\D/g,'');
+
+    if(digits.length === 10){
+        phoneMsg.textContent="✅ Hợp lệ";
+        phoneMsg.style.color="green";
+        validPhone=true;
+    }else{
+        phoneMsg.textContent="❌ Nhập đủ 10 số";
+        phoneMsg.style.color="red";
+        validPhone=false;
+    }
+
+    updateSubmit();
+});
+function updateSubmit(){
+
+    submitBtn.disabled =
+    !(
+        validName &&
+        validEmail &&
+        validPassword &&
+        validConfirm &&
+        validPhone
+    );
+}
