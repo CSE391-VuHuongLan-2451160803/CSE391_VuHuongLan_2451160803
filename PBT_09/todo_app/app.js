@@ -110,3 +110,66 @@ document
     render();
 
 });
+
+function saveTodos(){
+
+    localStorage.setItem(
+        "todos",
+        JSON.stringify(todos)
+    );
+
+}
+function loadTodos(){
+
+    const data=
+        localStorage.getItem("todos");
+
+    if(data){
+
+        todos=JSON.parse(data);
+
+    }
+
+}
+loadTodos();
+render();
+saveTodos();
+list.addEventListener("dblclick",(e)=>{
+
+    if(e.target.tagName!=="SPAN") return;
+
+    const li=e.target.closest("li");
+
+    const id=Number(li.dataset.id);
+
+    const todo=todos.find(
+        t=>t.id===id
+    );
+
+    const inputEdit=
+        document.createElement("input");
+
+    inputEdit.value=todo.text;
+
+    e.target.replaceWith(inputEdit);
+
+    inputEdit.focus();
+
+    inputEdit.addEventListener(
+        "keydown",
+        (event)=>{
+
+            if(event.key==="Enter"){
+
+                todo.text=inputEdit.value;
+
+                saveTodos();
+
+                render();
+
+            }
+
+        }
+    );
+
+});
