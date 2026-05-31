@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Quản lý sinh viên</title>
+
+  <link rel="stylesheet" href="b1.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>QUẢN LÝ SINH VIÊN</h1>
+
+  <div class="top-bar">
+    <button class="btn btn-add" id="openModalBtn">
+      + Thêm sinh viên
+    </button>
+  </div>
+
+  <!-- Statistics -->
+  <div class="statistics">
+
+    <div class="stat-box">
+      <h3>Tổng số sinh viên</h3>
+      <p id="totalStudents">0</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>Điểm trung bình lớp</h3>
+      <p id="classAverage">0</p>
+    </div>
+
+  </div>
+
+  <!-- Message -->
+  <div class="message success" id="messageBox"></div>
+
+  <!-- Table -->
+  <table>
+
+    <thead>
+      <tr>
+        <th>Mã SV</th>
+        <th>Họ tên</th>
+        <th>Ngày sinh</th>
+        <th>Lớp</th>
+        <th>Điểm TB</th>
+        <th>Email</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+
+    <tbody id="studentTableBody">
+        <tr>
+    <td>SV001</td>
+    <td>Nguyễn Văn An</td>
+    <td>2003-05-12</td>
+    <td>CNTT1</td>
+    <td>8.5</td>
+    <td>an@gmail.com</td>
+
+    <td>
+      <button class="btn btn-edit">
+        Sửa
+      </button>
+
+      <button class="btn btn-delete">
+        Xóa
+      </button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>SV002</td>
+    <td>Trần Thị Bình</td>
+    <td>2002-11-20</td>
+    <td>CNTT2</td>
+    <td>7.8</td>
+    <td>binh@gmail.com</td>
+
+    <td>
+      <button class="btn btn-edit">
+        Sửa
+      </button>
+
+      <button class="btn btn-delete">
+        Xóa
+      </button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>SV003</td>
+    <td>Lê Hoàng Minh</td>
+    <td>2003-02-15</td>
+    <td>KTPM1</td>
+    <td>9.1</td>
+    <td>minh@gmail.com</td>
+
+    <td>
+      <button class="btn btn-edit">
+        Sửa
+      </button>
+
+      <button class="btn btn-delete">
+        Xóa
+      </button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>SV004</td>
+    <td>Phạm Gia Huy</td>
+    <td>2002-09-08</td>
+    <td>MMT1</td>
+    <td>6.9</td>
+    <td>huy@gmail.com</td>
+
+    <td>
+      <button class="btn btn-edit">
+        Sửa
+      </button>
+
+      <button class="btn btn-delete">
+        Xóa
+      </button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>SV005</td>
+    <td>Đỗ Thu Trang</td>
+    <td>2003-07-25</td>
+    <td>CNTT3</td>
+    <td>8.0</td>
+    <td>trang@gmail.com</td>
+
+    <td>
+      <button class="btn btn-edit">
+        Sửa
+      </button>
+
+      <button class="btn btn-delete">
+        Xóa
+      </button>
+    </td>
+  </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="studentModal">
+
+  <div class="modal-content">
+
+    <span class="close" id="closeModal">&times;</span>
+
+    <h2 id="modalTitle">Thêm sinh viên</h2>
+
+    <form id="studentForm">
+
+      <div class="form-group">
+        <label>Mã sinh viên</label>
+        <input type="text" id="studentId" required>
+      </div>
+
+      <div class="form-group">
+        <label>Họ và tên</label>
+        <input type="text" id="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label>Ngày sinh</label>
+        <input type="date" id="birthDate" required>
+      </div>
+
+      <div class="form-group">
+        <label>Lớp học</label>
+        <input type="text" id="className" required>
+      </div>
+
+      <div class="form-group">
+        <label>Điểm trung bình</label>
+        <input type="number" step="0.1" id="averageScore" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="form-actions">
+
+        <button type="button" class="btn btn-cancel" id="cancelBtn">
+          Hủy
+        </button>
+
+        <button type="submit" class="btn btn-save" id="submitBtn">
+          Lưu sinh viên
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script src="b1.js"></script>
+
+</body>
+</html>

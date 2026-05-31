@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tailwind Components</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6 space-y-10">
+
+<!-- BUTTONS -->
+<section>
+
+    <h2 class="text-2xl font-bold mb-4">
+        Buttons
+    </h2>
+
+    <div class="flex flex-wrap gap-4 items-center">
+
+        <!-- PRIMARY -->
+        <button class="px-5 py-2 bg-blue-500 text-white rounded-lg
+                       hover:bg-blue-600
+                       focus:ring-4 focus:ring-blue-300">
+
+            Primary
+
+        </button>
+
+        <!-- SECONDARY -->
+        <button class="px-5 py-2 bg-gray-500 text-white rounded-lg
+                       hover:bg-gray-600
+                       focus:ring-4 focus:ring-gray-300">
+
+            Secondary
+
+        </button>
+
+        <!-- OUTLINE -->
+        <button class="px-5 py-2 border border-blue-500 text-blue-500 rounded-lg
+                       hover:bg-blue-500 hover:text-white">
+
+            Outline
+
+        </button>
+
+        <!-- DISABLED -->
+        <button disabled
+                class="px-5 py-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed">
+
+            Disabled
+
+        </button>
+
+        <!-- LOADING -->
+        <button class="px-5 py-2 bg-green-500 text-white rounded-lg
+                       flex items-center gap-2">
+
+            <span class="w-4 h-4 border-2 border-white border-t-transparent
+                         rounded-full animate-spin">
+            </span>
+
+            Loading
+
+        </button>
+
+        <!-- SIZES -->
+        <button class="px-2 py-1 bg-purple-500 text-white rounded">
+            Small
+        </button>
+
+        <button class="px-4 py-2 bg-purple-500 text-white rounded">
+            Medium
+        </button>
+
+        <button class="px-6 py-3 bg-purple-500 text-white rounded-lg">
+            Large
+        </button>
+
+    </div>
+
+</section>
+
+<!-- CARDS -->
+<section>
+
+    <h2 class="text-2xl font-bold mb-4">
+        Cards
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- PRODUCT CARD -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl
+                    transition-shadow overflow-hidden">
+
+            <img src="https://placehold.co/300x200"
+                 class="w-full">
+
+            <div class="p-4">
+
+                <h3 class="text-lg font-bold mb-2">
+                    iPhone 16
+                </h3>
+
+                <p class="text-gray-500 mb-3">
+                    Smartphone cao cấp
+                </p>
+
+                <button class="bg-blue-500 text-white px-4 py-2 rounded
+                               hover:bg-blue-600">
+
+                    Mua ngay
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PROFILE CARD -->
+        <div class="bg-white rounded-xl shadow-md p-6 text-center
+                    hover:shadow-xl transition-shadow">
+
+            <img src="https://placehold.co/100"
+                 class="w-24 h-24 rounded-full mx-auto mb-4">
+
+            <h3 class="text-xl font-semibold">
+                Nguyễn Văn A
+            </h3>
+
+            <p class="text-gray-500">
+                Frontend Developer
+            </p>
+
+        </div>
+
+        <!-- PRICING CARD -->
+        <div class="bg-white rounded-xl shadow-md p-6 text-center
+                    hover:scale-105 transition-transform">
+
+            <h3 class="text-2xl font-bold mb-4">
+                Premium
+            </h3>
+
+            <p class="text-4xl font-bold text-blue-500 mb-4">
+                299K
+            </p>
+
+            <ul class="space-y-2 mb-6">
+                <li>✔ Unlimited</li>
+                <li>✔ Support 24/7</li>
+                <li>✔ Cloud Storage</li>
+            </ul>
+
+            <button class="bg-blue-500 text-white px-5 py-2 rounded-lg
+                           hover:bg-blue-600">
+
+                Đăng ký
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FORMS -->
+<section>
+
+    <h2 class="text-2xl font-bold mb-4">
+        Forms
+    </h2>
+
+    <form class="bg-white p-6 rounded-xl shadow-md space-y-4">
+
+        <!-- INPUT -->
+        <div>
+
+            <label class="block mb-2 font-medium">
+                Email
+            </label>
+
+            <input type="email"
+                   placeholder="Nhập email"
+                   class="w-full border border-gray-300 rounded-lg px-4 py-2
+                          focus:ring-2 focus:ring-blue-300
+                          focus:outline-none">
+
+        </div>
+
+        <!-- SELECT -->
+        <div>
+
+            <label class="block mb-2 font-medium">
+                Thành phố
+            </label>
+
+            <select class="w-full border border-gray-300 rounded-lg px-4 py-2
+                           focus:ring-2 focus:ring-blue-300">
+
+                <option>Hà Nội</option>
+                <option>TP.HCM</option>
+
+            </select>
+
+        </div>
+
+        <!-- TEXTAREA -->
+        <div>
+
+            <label class="block mb-2 font-medium">
+                Ghi chú
+            </label>
+
+            <textarea rows="4"
+                      class="w-full border border-gray-300 rounded-lg px-4 py-2
+                             focus:ring-2 focus:ring-blue-300"
+                      placeholder="Nhập ghi chú">
+            </textarea>
+
+        </div>
+
+        <!-- CHECKBOX -->
+        <div class="space-y-2">
+
+            <label class="flex items-center gap-2">
+
+                <input type="checkbox">
+
+                HTML
+
+            </label>
+
+            <label class="flex items-center gap-2">
+
+                <input type="checkbox">
+
+                CSS
+
+            </label>
+
+        </div>
+
+    </form>
+
+</section>
+
+<!-- ALERTS -->
+<section>
+
+    <h2 class="text-2xl font-bold mb-4">
+        Alerts
+    </h2>
+
+    <div class="space-y-4">
+
+        <!-- SUCCESS -->
+        <div class="bg-green-100 text-green-700 px-4 py-3 rounded-lg
+                    flex justify-between items-center">
+
+            <span>Thành công!</span>
+
+            <button class="font-bold hover:text-black">
+                ✕
+            </button>
+
+        </div>
+
+        <!-- ERROR -->
+        <div class="bg-red-100 text-red-700 px-4 py-3 rounded-lg
+                    flex justify-between items-center">
+
+            <span>Lỗi hệ thống!</span>
+
+            <button class="font-bold hover:text-black">
+                ✕
+            </button>
+
+        </div>
+
+        <!-- WARNING -->
+        <div class="bg-yellow-100 text-yellow-700 px-4 py-3 rounded-lg
+                    flex justify-between items-center">
+
+            <span>Cảnh báo!</span>
+
+            <button class="font-bold hover:text-black">
+                ✕
+            </button>
+
+        </div>
+
+        <!-- INFO -->
+        <div class="bg-blue-100 text-blue-700 px-4 py-3 rounded-lg
+                    flex justify-between items-center">
+
+            <span>Thông tin mới!</span>
+
+            <button class="font-bold hover:text-black">
+                ✕
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- NAVIGATION -->
+<section>
+
+    <h2 class="text-2xl font-bold mb-4">
+        Navigation
+    </h2>
+
+    <!-- NAVBAR -->
+    <nav class="bg-white rounded-xl shadow-md px-6 py-4
+                flex justify-between items-center mb-6">
+
+        <h1 class="text-xl font-bold">
+            ShopTLU
+        </h1>
+
+        <ul class="flex gap-6">
+
+            <li>
+                <a href="#"
+                   class="hover:text-blue-500">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                   class="hover:text-blue-500">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                   class="hover:text-blue-500">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- SIDEBAR -->
+    <aside class="bg-white rounded-xl shadow-md w-64 p-4">
+
+        <ul class="space-y-3">
+
+            <li>
+                <a href="#"
+                   class="block px-4 py-2 rounded-lg hover:bg-blue-100">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                   class="block px-4 py-2 rounded-lg hover:bg-blue-100">
+                    Orders
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                   class="block px-4 py-2 rounded-lg hover:bg-blue-100">
+                    Users
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+</section>
+
+</body>
+</html>
