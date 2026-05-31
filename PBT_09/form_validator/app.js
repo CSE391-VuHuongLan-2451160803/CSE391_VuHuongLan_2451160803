@@ -164,3 +164,27 @@ function updateSubmit(){
         validPhone
     );
 }
+const form = document.querySelector("#registerForm");
+
+const modal = document.querySelector("#modal");
+const userInfo = document.querySelector("#userInfo");
+const closeModal = document.querySelector("#closeModal");
+
+form.addEventListener("submit",(e)=>{
+
+    e.preventDefault();
+
+    userInfo.innerHTML = `
+        <p>Tên: ${nameInput.value}</p>
+        <p>Email: ${emailInput.value}</p>
+        <p>Điện thoại: ${phoneInput.value}</p>
+    `;
+
+    modal.classList.remove("hidden");
+});
+
+closeModal.addEventListener("click",()=>{
+
+    modal.classList.add("hidden");
+
+});
