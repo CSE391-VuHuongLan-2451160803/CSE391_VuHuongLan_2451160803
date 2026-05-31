@@ -67,3 +67,58 @@ function formatProductList(products) {
             product.price.toLocaleString("vi-VN") + "đ"
     }));
 }
+
+// 7
+function averageRating(products) {
+
+    const total = products.reduce(
+        (sum, product) => sum + product.rating,
+        0
+    );
+
+    return total / products.length;
+}
+
+// 8
+function searchProducts(products, keyword) {
+
+    keyword = keyword.toLowerCase();
+
+    return products.filter(product =>
+        product.name.toLowerCase().includes(keyword)
+    );
+}console.log("=== IN STOCK ===");
+console.log(getInStock(products));
+
+console.log("\n=== PHONE 15-25 TRIỆU ===");
+console.log(
+    filterProducts(
+        products,
+        "phone",
+        15000000,
+        25000000
+    )
+);
+
+console.log("\n=== SORT ASC ===");
+console.log(sortByPrice(products));
+
+console.log("\n=== SORT DESC ===");
+console.log(sortByPrice(products, "desc"));
+
+console.log("\n=== CHEAPEST ===");
+console.log(cheapestByCategory(products));
+
+console.log("\n=== INVENTORY VALUE ===");
+console.log(
+    totalInventoryValue(products).toLocaleString("vi-VN") + "đ"
+);
+
+console.log("\n=== FORMATTED ===");
+console.log(formatProductList(products));
+
+console.log("\n=== AVG RATING ===");
+console.log(averageRating(products));
+
+console.log("\n=== SEARCH 'pro' ===");
+console.log(searchProducts(products, "pro"));
