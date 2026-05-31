@@ -28,34 +28,22 @@ function render(){
 
     list.innerHTML="";
 
-    todos.forEach(todo=>{
+    let filtered=todos;
 
-        const li=document.createElement("li");
+if(currentFilter==="active"){
+    filtered=todos.filter(
+        t=>!t.completed
+    );
+}
 
-        li.className="todo-item";
+if(currentFilter==="completed"){
+    filtered=todos.filter(
+        t=>t.completed
+    );
+}
 
-        li.dataset.id=todo.id;
-
-        const span=document.createElement("span");
-
-        span.textContent=todo.text;
-
-        if(todo.completed){
-            span.classList.add("completed");
-        }
-
-        const del=document.createElement("button");
-
-        del.textContent="❌";
-
-        del.className="delete";
-
-        li.append(span);
-        li.append(del);
-
-        list.append(li);
-    });
-
+filtered.forEach()
+updateCount();
 }
 
 list.addEventListener("click",(e)=>{
@@ -83,5 +71,42 @@ list.addEventListener("click",(e)=>{
 
         render();
     }
+
+});
+
+let currentFilter="all";
+document
+.querySelector(".filters")
+.addEventListener("click",(e)=>{
+
+    if(e.target.dataset.filter){
+
+        currentFilter=e.target.dataset.filter;
+
+        render();
+    }
+
+});
+
+function updateCount(){
+
+    const active=todos.filter(
+        t=>!t.completed
+    ).length;
+
+    document.getElementById("count")
+    .textContent=`${active} items left`;
+
+}
+
+document
+.getElementById("clearCompleted")
+.addEventListener("click",()=>{
+
+    todos=todos.filter(
+        t=>!t.completed
+    );
+
+    render();
 
 });
