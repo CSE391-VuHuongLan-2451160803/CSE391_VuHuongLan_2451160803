@@ -289,3 +289,70 @@ filteredProducts.sort(
 renderProducts(filteredProducts);
 
 });
+
+let cartCount=0;
+document
+.getElementById("products")
+.addEventListener("click",(e)=>{
+
+const card=
+e.target.closest(".card");
+
+if(!card) return;
+
+const id=
+Number(card.dataset.id);
+
+const product=
+products.find(
+p=>p.id===id
+);
+
+if(e.target.classList.contains("addCart")){
+
+cartCount++;
+
+document
+.getElementById("cartBadge")
+.textContent=cartCount;
+
+return;
+}
+
+showModal(product);
+
+});
+const modal=
+document.getElementById("modal");
+
+function showModal(product){
+
+document
+.getElementById("modalTitle")
+.textContent=product.name;
+
+document
+.getElementById("modalPrice")
+.textContent=
+product.price.toLocaleString()+"đ";
+
+modal.classList.remove("hidden");
+
+}
+
+document
+.getElementById("closeModal")
+.addEventListener("click",()=>{
+
+modal.classList.add("hidden");
+
+});
+document
+.getElementById("darkBtn")
+.addEventListener("click",()=>{
+
+document.body.classList.toggle(
+"dark-mode"
+);
+
+});
